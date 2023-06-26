@@ -1,0 +1,7 @@
+<launch>
+    <arg name="frame_prefix" default=""/>
+  
+    <node pkg="explore_lite" type="explore" respawn="false" name="explore" output="screen">
+        <rosparam file="$(find go1_config)/config/explore/exploration.yaml" command="load" />
+    </node>
+</launch>
